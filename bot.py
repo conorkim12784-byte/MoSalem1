@@ -1,10 +1,21 @@
 import logging
+import subprocess
+import os
 
 from pyrogram import Client, idle
 from pyrogram.errors.exceptions.bad_request_400 import BadRequest
 
 from config import TOKEN, disabled_plugins, log_chat, API_ID, API_HASH
 from utils import get_restarted, del_restarted
+
+# مزامنة الوقت مع تيليجرام
+try:
+    subprocess.run(["ntpdate", "-u", "time.cloudflare.com"], capture_output=True)
+except Exception:
+    try:
+        subprocess.run(["ntpdate", "-u", "pool.ntp.org"], capture_output=True)
+    except Exception:
+        pass
 
 with open("version.txt") as f:
     version = f.read().strip()

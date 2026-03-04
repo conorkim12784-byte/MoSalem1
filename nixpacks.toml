@@ -1,0 +1,5 @@
+[phases.setup]
+nixPkgs = ["ntp", "python3"]
+
+[start]
+cmd = "ntpdate -u pool.ntp.org || true && python bot.py"
