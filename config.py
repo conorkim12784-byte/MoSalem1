@@ -5,7 +5,7 @@ import requests
 from database import get_db_general_rtb
 from utils import get_restarted
 
-super_sudoers = [6602400569]
+super_sudoers = [5390210278]
 
 
 ####################################################################################
@@ -44,7 +44,7 @@ if wr is None:
 
 # Bot token from Bot Father
 
-# TOKEN = "5715894811:AAEdH_xnLRq1zoNMvZITgQSpJWn8pPjkb4k"
+# TOKEN = "1619909211:AAFAcQn1FR1aaFloF9hhM5e5vcDTT6MeycQ"
 f = open('info.json', )
 data = json.load(f)
 TOKEN = data['Token']
@@ -55,7 +55,7 @@ API_ID = 22716645
 API_HASH = "fe2a8c4d90fa297620f0b385ec4e544c"
 
 # Chat used for logs
-log_chat = 6602400569
+log_chat = 1923931101
 # Sudoers and super sudoers
 sudoers = [data['idSudo']]
 sudoers += super_sudoers
