@@ -94,31 +94,31 @@ async def basegroup(c: Client, m: Message):
         if await lock_lockreply_test(m):
             for rp in get_db_greply():
                 if m.text == rp[0]:
-                    if re.findall("\.png$", rp[1]):
+                    if re.findall(r"\.png$", rp[1]):
                         reptxttypy = rp[1].split(".png")
                         await m.reply_photo(reptxttypy[0])
                     else:
-                        if re.findall("\.webp$", rp[1]):
+                        if re.findall(r"\.webp$", rp[1]):
                             reptxttypy = rp[1].split(".webp")
                             await m.reply_sticker(reptxttypy[0])
                         else:
-                            if re.findall("\.gif$", rp[1]):
+                            if re.findall(r"\.gif$", rp[1]):
                                 reptxttypy = rp[1].split(".gif")
                                 await m.reply_animation(reptxttypy[0])
                             else:
-                                if re.findall("\.mp4$", rp[1]):
+                                if re.findall(r"\.mp4$", rp[1]):
                                     reptxttypy = rp[1].split(".mp4")
                                     await m.reply_video(reptxttypy[0])
                                 else:
-                                    if re.findall("\.pdf$", rp[1]):
+                                    if re.findall(r"\.pdf$", rp[1]):
                                         reptxttypy = rp[1].split(".pdf")
                                         await m.reply_document(reptxttypy[0])
                                     else:
-                                        if re.findall("\.mp3$", rp[1]):
+                                        if re.findall(r"\.mp3$", rp[1]):
                                             reptxttypy = rp[1].split(".mp3")
                                             await m.reply_audio(reptxttypy[0])
                                         else:
-                                            if re.findall("\.ogg$", rp[1]):
+                                            if re.findall(r"\.ogg$", rp[1]):
                                                 reptxttypy = rp[1].split(".ogg")
                                                 await m.reply_voice(reptxttypy[0])
                                             else:
@@ -127,31 +127,31 @@ async def basegroup(c: Client, m: Message):
     if replay_group_test(m):
         for rp in get_db_replygroup(m.chat.id):
             if m.text == rp[0]:
-                if re.findall("\.png$", rp[1]):
+                if re.findall(r"\.png$", rp[1]):
                     reptxttypy = rp[1].split(".png")
                     await m.reply_photo(reptxttypy[0])
                 else:
-                    if re.findall("\.webp$", rp[1]):
+                    if re.findall(r"\.webp$", rp[1]):
                         reptxttypy = rp[1].split(".webp")
                         await m.reply_sticker(reptxttypy[0])
                     else:
-                        if re.findall("\.gif$", rp[1]):
+                        if re.findall(r"\.gif$", rp[1]):
                             reptxttypy = rp[1].split(".gif")
                             await m.reply_animation(reptxttypy[0])
                         else:
-                            if re.findall("\.mp4$", rp[1]):
+                            if re.findall(r"\.mp4$", rp[1]):
                                 reptxttypy = rp[1].split(".mp4")
                                 await m.reply_video(reptxttypy[0])
                             else:
-                                if re.findall("\.pdf$", rp[1]):
+                                if re.findall(r"\.pdf$", rp[1]):
                                     reptxttypy = rp[1].split(".pdf")
                                     await m.reply_document(reptxttypy[0])
                                 else:
-                                    if re.findall("\.mp3$", rp[1]):
+                                    if re.findall(r"\.mp3$", rp[1]):
                                         reptxttypy = rp[1].split(".mp3")
                                         await m.reply_audio(reptxttypy[0])
                                     else:
-                                        if re.findall("\.ogg$", rp[1]):
+                                        if re.findall(r"\.ogg$", rp[1]):
                                             reptxttypy = rp[1].split(".ogg")
                                             await m.reply_voice(reptxttypy[0])
                                         else:
@@ -832,13 +832,13 @@ async def basegroup(c: Client, m: Message):
             await m.reply_text("⌔ انت لست المطور الاساسي\n√", reply_to_message_id=m.message_id)
             return
 
-    if re.match("^حظر عام @(.*)$", str(m.text)):
+    if re.match(r"^حظر عام @(.*)$", str(m.text)):
         if secsudo(m):
             await gbanuser(c, m)
         else:
             await m.reply_text("⌔ انت لست المطور الاساسي\n√", reply_to_message_id=m.message_id)
             return
-    if re.match("^حظر عام (\\d+)$", str(m.text)):
+    if re.match(r"^حظر عام (\\d+)$", str(m.text)):
         if secsudo(m):
             await gbanuser(c, m)
         else:
@@ -852,13 +852,13 @@ async def basegroup(c: Client, m: Message):
             await m.reply_text("⌔ انت لست المطور الاساسي\n√", reply_to_message_id=m.message_id)
             return
 
-    if re.match("^كتم عام @(.*)$", str(m.text)):
+    if re.match(r"^كتم عام @(.*)$", str(m.text)):
         if secsudo(m):
             await gmuteuser(c, m)
         else:
             await m.reply_text("⌔ انت لست المطور الاساسي\n√", reply_to_message_id=m.message_id)
             return
-    if re.match("^كتم عام (\\d+)$", str(m.text)):
+    if re.match(r"^كتم عام (\\d+)$", str(m.text)):
         if secsudo(m):
             await gmuteuser(c, m)
         else:
@@ -872,13 +872,13 @@ async def basegroup(c: Client, m: Message):
             await m.reply_text("⌔ انت لست المطور الاساسي\n√", reply_to_message_id=m.message_id)
             return
 
-    if re.match("^الغاء العام @(.*)$", str(m.text)):
+    if re.match(r"^الغاء العام @(.*)$", str(m.text)):
         if secsudo(m):
             await gunbanuser(c, m)
         else:
             await m.reply_text("⌔ انت لست المطور الاساسي\n√", reply_to_message_id=m.message_id)
             return
-    if re.match("^الغاء العام (\\d+)$", str(m.text)):
+    if re.match(r"^الغاء العام (\\d+)$", str(m.text)):
         if secsudo(m):
             await gunbanuser(c, m)
         else:
@@ -980,7 +980,7 @@ async def basegroup(c: Client, m: Message):
         else:
             await m.reply_text("⌔ انت لست المطور الاساسي\n√", reply_to_message_id=m.message_id)
             return
-    if re.match("^رفع مطور @(.*)$", str(m.text)) or re.match("^رفع مطور (\\d+)$", str(m.text)):
+    if re.match(r"^رفع مطور @(.*)$", str(m.text)) or re.match(r"^رفع مطور (\\d+)$", str(m.text)):
         if secsudo(m):
             await developersuser(c, m)
         else:
@@ -993,7 +993,7 @@ async def basegroup(c: Client, m: Message):
         else:
             await m.reply_text("⌔ انت لست المطور الاساسي\n√", reply_to_message_id=m.message_id)
             return
-    if re.match("^تنزيل مطور @(.*)$", str(m.text)) or re.match("^تنزيل مطور (\\d+)$", str(m.text)):
+    if re.match(r"^تنزيل مطور @(.*)$", str(m.text)) or re.match(r"^تنزيل مطور (\\d+)$", str(m.text)):
         if secsudo(m):
             await undeveloperuser(c, m)
         else:
@@ -1040,7 +1040,7 @@ async def basegroup(c: Client, m: Message):
         else:
             await m.reply_text("⌔ انت لست المطور الاساسي\n√", reply_to_message_id=m.message_id)
             return
-    if re.match("^رفع مطور ثانوي @(.*)$", str(m.text)) or re.match("^رفع مطور ثانوي (\\d+)$", str(m.text)):
+    if re.match(r"^رفع مطور ثانوي @(.*)$", str(m.text)) or re.match(r"^رفع مطور ثانوي (\\d+)$", str(m.text)):
         if sudo(m):
             await seconddevelopersuser(c, m)
         else:
@@ -1053,7 +1053,7 @@ async def basegroup(c: Client, m: Message):
         else:
             await m.reply_text("⌔ انت لست المطور الاساسي\n√", reply_to_message_id=m.message_id)
             return
-    if re.match("^تنزيل مطور ثانوي @(.*)$", str(m.text)) or re.match("^تنزيل مطور ثانوي (\\d+)$", str(m.text)):
+    if re.match(r"^تنزيل مطور ثانوي @(.*)$", str(m.text)) or re.match(r"^تنزيل مطور ثانوي (\\d+)$", str(m.text)):
         if sudo(m):
             await secondundeveloperuser(c, m)
         else:
@@ -1098,7 +1098,7 @@ async def basegroup(c: Client, m: Message):
         else:
             await m.reply_text("⌔ انت لست المطور الاساسي\n√", reply_to_message_id=m.message_id)
             return
-    if re.match("^رفع مميز عام @(.*)$", str(m.text)) or re.match("^رفع مميز عام (\\d+)$", str(m.text)):
+    if re.match(r"^رفع مميز عام @(.*)$", str(m.text)) or re.match(r"^رفع مميز عام (\\d+)$", str(m.text)):
         if secsudo(m):
             await genspecialuser(c, m)
         else:
@@ -1111,7 +1111,7 @@ async def basegroup(c: Client, m: Message):
         else:
             await m.reply_text("⌔ انت لست المطور الاساسي\n√", reply_to_message_id=m.message_id)
             return
-    if re.match("^تنزيل مميز عام @(.*)$", str(m.text)) or re.match("^تنزيل مميز عام (\\d+)$", str(m.text)):
+    if re.match(r"^تنزيل مميز عام @(.*)$", str(m.text)) or re.match(r"^تنزيل مميز عام (\\d+)$", str(m.text)):
         if secsudo(m):
             await ungenspecialuser(c, m)
         else:
@@ -1153,7 +1153,7 @@ async def basegroup(c: Client, m: Message):
         else:
             await m.reply_text("⌔ انت لست المطور\n√", reply_to_message_id=m.message_id)
             return
-    if re.match("^رفع مالك @(.*)$", str(m.text)) or re.match("^رفع مالك (\\d+)$", str(m.text)):
+    if re.match(r"^رفع مالك @(.*)$", str(m.text)) or re.match(r"^رفع مالك (\\d+)$", str(m.text)):
         if sudo2(m):
             await manageruser(c, m)
             return
@@ -1169,7 +1169,7 @@ async def basegroup(c: Client, m: Message):
             await m.reply_text("⌔ انت لست المطور\n√", reply_to_message_id=m.message_id)
             return
 
-    if re.match("^تنزيل مالك @(.*)$", str(m.text)) or re.match("^تنزيل مالك (\\d+)$", str(m.text)):
+    if re.match(r"^تنزيل مالك @(.*)$", str(m.text)) or re.match(r"^تنزيل مالك (\\d+)$", str(m.text)):
         if sudo2(m):
             await undmanagersuser(c, m)
             return
@@ -1204,7 +1204,7 @@ async def basegroup(c: Client, m: Message):
             await m.reply_text("⌔ يجب ان تكون مالك حتى تستطيع رفع مشرف\n√", reply_to_message_id=m.message_id)
             return
 
-    if re.match("^رفع مشرف @(.*)$", str(m.text)) or re.match("^رفع مشرف (\\d+)$", str(m.text)):
+    if re.match(r"^رفع مشرف @(.*)$", str(m.text)) or re.match(r"^رفع مشرف (\\d+)$", str(m.text)):
         if manager(m):
             await addadmingroupuser(c, m)
         else:
@@ -1218,7 +1218,7 @@ async def basegroup(c: Client, m: Message):
             await m.reply_text("⌔ يجب ان تكون مالك حتى تستطيع تنزيل مشرف\n√", reply_to_message_id=m.message_id)
             return
 
-    if re.match("^تنزيل مشرف @(.*)$", str(m.text)) or re.match("^تنزيل مشرف (\\d+)$", str(m.text)):
+    if re.match(r"^تنزيل مشرف @(.*)$", str(m.text)) or re.match(r"^تنزيل مشرف (\\d+)$", str(m.text)):
         if manager(m):
             await unadmingroipuser(c, m)
         else:
@@ -1232,7 +1232,7 @@ async def basegroup(c: Client, m: Message):
             await m.reply_text("⌔ يجب ان تكون مالك حتى تستطيع رفع منشئ\n√", reply_to_message_id=m.message_id)
             return
 
-    if re.match("^رفع منشئ @(.*)$", str(m.text)) or re.match("^رفع منشئ (\\d+)$", str(m.text)):
+    if re.match(r"^رفع منشئ @(.*)$", str(m.text)) or re.match(r"^رفع منشئ (\\d+)$", str(m.text)):
         if manager(m):
             await addconstractoruser(c, m)
         else:
@@ -1246,7 +1246,7 @@ async def basegroup(c: Client, m: Message):
             await m.reply_text("⌔ يجب ان تكون مالك حتى تستطيع تنزيل منشئ\n√", reply_to_message_id=m.message_id)
             return
 
-    if re.match("^تنزيل منشئ @(.*)$", str(m.text)) or re.match("^تنزيل منشئ (\\d+)$", str(m.text)):
+    if re.match(r"^تنزيل منشئ @(.*)$", str(m.text)) or re.match(r"^تنزيل منشئ (\\d+)$", str(m.text)):
         if manager(m):
             await unconstractoruser(c, m)
         else:
@@ -1280,7 +1280,7 @@ async def basegroup(c: Client, m: Message):
             await m.reply_text("⌔ يجب ان تكون منشئ على الاقل لكى تستطيع رفع ادمن\n√", reply_to_message_id=m.message_id)
             return
 
-    if re.match("^رفع ادمن @(.*)$", str(m.text)) or re.match("^رفع ادمن (\\d+)$", str(m.text)):
+    if re.match(r"^رفع ادمن @(.*)$", str(m.text)) or re.match(r"^رفع ادمن (\\d+)$", str(m.text)):
         if constractors(m):
             await addadminuser(c, m)
         else:
@@ -1295,7 +1295,7 @@ async def basegroup(c: Client, m: Message):
                                reply_to_message_id=m.message_id)
             return
 
-    if re.match("^تنزيل ادمن @(.*)$", str(m.text)) or re.match("^تنزيل ادمن (\\d+)$", str(m.text)):
+    if re.match(r"^تنزيل ادمن @(.*)$", str(m.text)) or re.match(r"^تنزيل ادمن (\\d+)$", str(m.text)):
         if constractors(m):
             await unadminuser(c, m)
         else:
@@ -1332,7 +1332,7 @@ async def basegroup(c: Client, m: Message):
             await m.reply_text("⌔ يجب ان تكون ادمن على الاقل لكى تستطيع رفع مميز\n√", reply_to_message_id=m.message_id)
             return
 
-    if re.match("^رفع مميز @(.*)$", str(m.text)) or re.match("^رفع مميز (\\d+)$", str(m.text)):
+    if re.match(r"^رفع مميز @(.*)$", str(m.text)) or re.match(r"^رفع مميز (\\d+)$", str(m.text)):
         if admin(m):
             await addspecialuser(c, m)
         else:
@@ -1347,7 +1347,7 @@ async def basegroup(c: Client, m: Message):
                                reply_to_message_id=m.message_id)
             return
 
-    if re.match("^تنزيل مميز @(.*)$", str(m.text)) or re.match("^تنزيل مميز (\\d+)$", str(m.text)):
+    if re.match(r"^تنزيل مميز @(.*)$", str(m.text)) or re.match(r"^تنزيل مميز (\\d+)$", str(m.text)):
         if admin(m):
             await unspecialuser(c, m)
         else:
@@ -1386,7 +1386,7 @@ async def basegroup(c: Client, m: Message):
             await m.reply_text("⌔ يجب ان تكون معك رتبه على الاقل لكى تستطيع حظر العضو\n√",
                                reply_to_message_id=m.message_id)
             return
-    if re.match("^حظر @(.*)$", str(m.text)) or re.match("^حظر (\\d+)$", str(m.text)):
+    if re.match(r"^حظر @(.*)$", str(m.text)) or re.match(r"^حظر (\\d+)$", str(m.text)):
         if admin(m):
             await banuser(c, m)
         else:
@@ -1401,7 +1401,7 @@ async def basegroup(c: Client, m: Message):
             await m.reply_text("⌔ يجب ان تكون معك رتبه على الاقل لكى تستطيع الغاء حظر العضو",
                                reply_to_message_id=m.message_id)
             return
-    if re.match("^الغاء حظر @(.*)$", str(m.text)) or re.match("^الغاء حظر (\\d+)$", str(m.text)):
+    if re.match(r"^الغاء حظر @(.*)$", str(m.text)) or re.match(r"^الغاء حظر (\\d+)$", str(m.text)):
         if admin(m):
             await unbanuser(c, m)
         else:
@@ -1449,7 +1449,7 @@ async def basegroup(c: Client, m: Message):
             await m.reply_text("⌔ يجب ان تكون معك رتبه على الاقل لكى تستطيع كتم العضو",
                                reply_to_message_id=m.message_id)
             return
-    if re.match("^كتم @(.*)$", str(m.text)) or re.match("^كتم (\\d+)$", str(m.text)):
+    if re.match(r"^كتم @(.*)$", str(m.text)) or re.match(r"^كتم (\\d+)$", str(m.text)):
         if admin(m):
             await muteuser(c, m)
         else:
@@ -1464,7 +1464,7 @@ async def basegroup(c: Client, m: Message):
             await m.reply_text("⌔ يجب ان تكون معك رتبه على الاقل لكى تستطيع الغاء كتم العضو",
                                reply_to_message_id=m.message_id)
             return
-    if re.match("^الغاء كتم @(.*)$", str(m.text)) or re.match("^الغاء كتم (\\d+)$", str(m.text)):
+    if re.match(r"^الغاء كتم @(.*)$", str(m.text)) or re.match(r"^الغاء كتم (\\d+)$", str(m.text)):
         if admin(m):
             await unmuteuser(c, m)
         else:
@@ -1505,7 +1505,7 @@ async def basegroup(c: Client, m: Message):
             await m.reply_text("⌔ يجب ان تكون منشئ لاستخدام هذا الامر\n√", reply_to_message_id=m.message_id)
             return
 
-    if re.match("^حظر لمده (.*)$", str(m.text)) and m.reply_to_message:
+    if re.match(r"^حظر لمده (.*)$", str(m.text)) and m.reply_to_message:
         if admin(m):
             await tban(c, m)
         else:
@@ -1513,7 +1513,7 @@ async def basegroup(c: Client, m: Message):
                                reply_to_message_id=m.message_id)
             return
 
-    if re.match("^كتم لمده (.*)$", str(m.text)) and m.reply_to_message:
+    if re.match(r"^كتم لمده (.*)$", str(m.text)) and m.reply_to_message:
         if admin(m):
             await tmute(c, m)
         else:
@@ -1528,7 +1528,7 @@ async def basegroup(c: Client, m: Message):
             await m.reply_text("⌔ يجب ان تكون معك رتبه على الاقل لكى تستطيع طرد العضو",
                                reply_to_message_id=m.message_id)
             return
-    if re.match("^طرد @(.*)$", str(m.text)) or re.match("^طرد (\\d+)$", str(m.text)):
+    if re.match(r"^طرد @(.*)$", str(m.text)) or re.match(r"^طرد (\\d+)$", str(m.text)):
         if admin(m):
             await kickuser(c, m)
         else:
@@ -1798,7 +1798,7 @@ async def basegroup(c: Client, m: Message):
                                reply_to_message_id=m.message_id)
             return
 
-    if re.match("^منع (.*)$", str(m.text)):
+    if re.match(r"^منع (.*)$", str(m.text)):
         if constractors(m):
             if get_db_blocktext(m.chat.id) is None:
                 set_db_blocktext(m.text[4:], m.chat.id)
@@ -1815,7 +1815,7 @@ async def basegroup(c: Client, m: Message):
             await m.reply_text("⌔ يجب ان تكون منشئ لاستخدام هذا الامر\n√", reply_to_message_id=m.message_id)
             return
 
-    if re.match("^الغاء منع (.*)$", str(m.text)):
+    if re.match(r"^الغاء منع (.*)$", str(m.text)):
         if constractors(m):
             if get_db_blocktext(m.chat.id) is None:
                 await m.reply_text("⌔ الكلمه غير ممنوعه اصلا\n√", reply_to_message_id=m.message_id)
@@ -2133,7 +2133,7 @@ async def basegroup(c: Client, m: Message):
         else:
             await m.reply_text("⌔ التاج مقفول اطلب من المالك فتحه\n√",
                                reply_to_message_id=m.message_id)
-    if re.match("^@all (.*)$", str(m.text)):
+    if re.match(r"^@all (.*)$", str(m.text)):
         m.text = m.text.split("@all", 1)
         if manager(m):
             await mentionallgroup(c, m, m.text[1] + "\n")
@@ -2407,7 +2407,7 @@ async def basegroup(c: Client, m: Message):
             await m.reply_text("⌔ يجب ان تكون مميز على الاقل لاستخدام هذا الامر\n√", reply_to_message_id=m.message_id)
             return
 
-    if re.match("^كشف @(.*)$", str(m.text)) or re.match("^كشف (\\d+)$", str(m.text)):
+    if re.match(r"^كشف @(.*)$", str(m.text)) or re.match(r"^كشف (\\d+)$", str(m.text)):
         if special(m):
             m.text = m.text[4:]
             result = await check_username(m, c)
@@ -2451,7 +2451,7 @@ async def basegroup(c: Client, m: Message):
         else:
             await m.reply_text("⌔ هذا الامر لرتبه منشئ او اعلى\n√", reply_to_message_id=m.message_id)
             return
-    if re.match("^كشف القيود @(.*)$", str(m.text)) or re.match("^كشف القيود (\\d+)$", str(m.text)):
+    if re.match(r"^كشف القيود @(.*)$", str(m.text)) or re.match(r"^كشف القيود (\\d+)$", str(m.text)):
         if admin(m):
             m.text = m.text[11:]
             result = await check_username(m, c)
@@ -2693,8 +2693,8 @@ async def basegroup(c: Client, m: Message):
             await del_message(c, m)
             return
 
-    if re.match("^مسح (\\d+)$", str(m.text)) or re.match("^حذف (\\d+)$", str(m.text))\
-            or re.match("^تنظيف (\\d+)$", str(m.text)):
+    if re.match(r"^مسح (\\d+)$", str(m.text)) or re.match(r"^حذف (\\d+)$", str(m.text))\
+            or re.match(r"^تنظيف (\\d+)$", str(m.text)):
         num = int(m.text[4:])
         message_id = m.message_id
         if constractors(m):
@@ -2880,7 +2880,7 @@ async def basegroup(c: Client, m: Message):
                            reply_to_message_id=m.message_id)
         return
 
-    if re.match("^اضف نقاط (\\d+)$", str(m.text)) and m.reply_to_message:
+    if re.match(r"^اضف نقاط (\\d+)$", str(m.text)) and m.reply_to_message:
         if manager(m):
             set_db_mypointgame(int(m.text[9:]), m.reply_to_message.from_user.id, m.chat.id)
             await m.reply_text(f"⌔ تم اضافه *{m.text[9:]}* نقطه له\n√", reply_to_message_id=m.message_id)
@@ -3288,7 +3288,7 @@ async def basegroup(c: Client, m: Message):
                                reply_to_message_id=m.message_id)
             return
 
-    if re.match("^معني (.*)$", str(m.text)) or re.match("^معنى (.*)$", str(m.text)):
+    if re.match(r"^معني (.*)$", str(m.text)) or re.match(r"^معنى (.*)$", str(m.text)):
         if lock_namemeaning_test(m):
             await m.reply_text("⌔ معاني الاسماء مقفوله اطلب من الادمن فتحها",
                                reply_to_message_id=m.message_id)
@@ -3375,7 +3375,7 @@ async def basegroup(c: Client, m: Message):
             await m.reply_text("⌔ هذا الامر للمالك فقط\n√", reply_to_message_id=m.message_id)
             return
 
-    if re.match("^طقس (.*)$", str(m.text)):
+    if re.match(r"^طقس (.*)$", str(m.text)):
         await weather(c, m)
         return
 
@@ -3660,11 +3660,11 @@ async def basegroup(c: Client, m: Message):
 ########################################################################################################################
 ########################################################################################################################
 
-    if re.match("^قول (.*)$", str(m.text)):
+    if re.match(r"^قول (.*)$", str(m.text)):
         await echo_text(m)
         return
 
-    if re.match("^انطق (.*)$", str(m.text)):
+    if re.match(r"^انطق (.*)$", str(m.text)):
         await say_text(m)
         return
 
