@@ -149,10 +149,10 @@ def special(m):
 
 async def get_Rank(m):
     leader = "عضو"
-    if m.from_user.id == 5571985743:
+    if m.from_user.id == 1923931101:
         leader = "مبرمج السورس"
     else:
-        if m.from_user.id == 1567541849:
+        if m.from_user.id == 1923931101:
             leader = "مبرمج السورس"
         else:
             if sudo(m):
@@ -305,10 +305,10 @@ def specialll(u, m):
 
 async def get_Rankkk(u, m):
     leader = "عضو"
-    if u == 1567541849:
+    if u == 1923931101:
         leader = "مطور السورس"
     else:
-        if u == 5571985743:
+        if u == 1923931101:
             leader = "مبرمج السورس"
         else:
             if sudooo(u):
@@ -343,10 +343,10 @@ async def get_Rankkk(u, m):
 
 async def get_Rank_ana_meen(m):
     leader = "انت مجرد عضو حقير مش عاوز اسمع صوتك💔😂"
-    if m.from_user.id == 5571985743:
+    if m.from_user.id == 1923931101:
         leader = "انت قلبى اللى مبرمجني❤️🙄"
     else:
-        if m.from_user.id == 1567541849:
+        if m.from_user.id == 1923931101:
             leader = "انت مطور السورس روح قلبى 🥺❤️"
         else:
             if sudo(m):

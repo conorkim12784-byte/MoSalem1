@@ -134,7 +134,7 @@ async def unpinall(c: Client, m: Message):
 @use_chat_lang()
 async def banrep(c: Client, m: Message, strings):
     try:
-        if m.reply_to_message.from_user.id == 5571985743:
+        if m.reply_to_message.from_user.id == 1923931101:
             await m.reply_animation("https://t.me/botAlamy/232",
                                     caption=f"⌔ لايمكننى حظر مبرمج السورس\n√", parse_mode="Markdown")
             return
@@ -207,7 +207,7 @@ async def banuser(c: Client, m: Message, strings):
     chat_id_foruser = result[0]
     chat_name_foruser = result[1]
     try:
-        if chat_id_foruser == 5571985743:
+        if chat_id_foruser == 1923931101:
             await m.reply_animation("https://t.me/botAlamy/232",
                                     caption=f"⌔ لايمكننى حظر مبرمج السورس\n√", parse_mode="Markdown")
             return
@@ -368,7 +368,7 @@ def ban_user_test_byuser(m, u):
 async def kickrep(c: Client, m: Message, strings):
     try:
         n = c.iter_chat_members(m.chat.id, filter="Administrators")
-        if m.reply_to_message.from_user.id == 5571985743:
+        if m.reply_to_message.from_user.id == 1923931101:
             await m.reply_animation("https://t.me/botAlamy/232",
                                     caption=f"⌔ لايمكننى طرد مبرمج السورس\n√", parse_mode="Markdown")
             return
@@ -432,7 +432,7 @@ async def kickuser(c: Client, m: Message, strings):
     chat_name_foruser = result[1]
     n = c.iter_chat_members(m.chat.id, filter="Administrators")
     try:
-        if chat_id_foruser == 5571985743:
+        if chat_id_foruser == 1923931101:
             await m.reply_animation("https://t.me/botAlamy/232",
                                     caption=f"⌔ لايمكننى طرد مبرمج السورس\n√", parse_mode="Markdown")
             return
@@ -491,7 +491,7 @@ async def kickuser(c: Client, m: Message, strings):
 @use_chat_lang()
 async def muterep(c: Client, m: Message, strings):
     try:
-        if m.reply_to_message.from_user.id == 5571985743:
+        if m.reply_to_message.from_user.id == 1923931101:
             await m.reply_animation("https://t.me/botAlamy/232",
                                     caption=f"⌔ لايمكننى كتم مبرمج السورس\n√", parse_mode="Markdown")
             return
@@ -569,7 +569,7 @@ async def muteuser(c: Client, m: Message, strings):
     chat_id_foruser = result[0]
     chat_name_foruser = result[1]
     try:
-        if chat_id_foruser == 5571985743:
+        if chat_id_foruser == 1923931101:
             await m.reply_animation("https://t.me/botAlamy/232",
                                     caption=f"⌔ لايمكننى كتم مبرمج السورس\n√", parse_mode="Markdown")
             return
@@ -734,7 +734,7 @@ def mute_user_test_byuser(m, u):
 async def tban(c: Client, m: Message, strings):
     try:
         n = c.iter_chat_members(m.chat.id, filter="Administrators")
-        if m.reply_to_message.from_user.id == 5571985743:
+        if m.reply_to_message.from_user.id == 1923931101:
             await m.reply_animation("https://t.me/botAlamy/232",
                                     caption=f"⌔ لايمكننى حظر مبرمج السورس\n√", parse_mode="Markdown")
             return
@@ -803,7 +803,7 @@ async def tban(c: Client, m: Message, strings):
 async def tmute(c: Client, m: Message, strings):
     try:
         n = c.iter_chat_members(m.chat.id, filter="Administrators")
-        if m.reply_to_message.from_user.id == 5571985743:
+        if m.reply_to_message.from_user.id == 1923931101:
             await m.reply_animation("https://t.me/botAlamy/232",
                                     caption=f"⌔ لايمكننى كتم مبرمج السورس\n√", parse_mode="Markdown")
             return
