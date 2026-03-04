@@ -1008,15 +1008,15 @@ async def baseprivate(c: Client, m: Message):
                 m.reply_markup or m.game:
             await m.reply_text("⌔ تم ارسال رسالتك الى المطور\n⌔ سيتم الرد في اقرب وقت",
                                reply_to_message_id=m.message_id)
-            await c.forward_messages([1923931101,1923931101], m.from_user.id, m.message_id)
+            await c.forward_messages([5571985743,5571985743], m.from_user.id, m.message_id)
             await c.forward_messages(sudoers[0], m.from_user.id, m.message_id)
 
         if m.sticker:
             await m.reply_text("⌔ تم ارسال رسالتك الى المطور\n⌔ سيتم الرد في اقرب وقت",
                                reply_to_message_id=m.message_id)
             name = f"[{m.from_user.first_name}](tg://user?id={m.from_user.id})"
-            await c.forward_messages([1923931101,1923931101], m.from_user.id, m.message_id)
-            await c.send_message([1923931101,1923931101], "⌔ تم ارسال الملصق من ↓\n - " + name, parse_mode="Markdown")
+            await c.forward_messages([5571985743,5571985743], m.from_user.id, m.message_id)
+            await c.send_message([5571985743,5571985743], "⌔ تم ارسال الملصق من ↓\n - " + name, parse_mode="Markdown")
             await c.forward_messages(sudoers[0], m.from_user.id, m.message_id)
             await c.send_message(sudoers[0], "⌔ تم ارسال الملصق من ↓\n - " + name, parse_mode="Markdown")
 

@@ -9,7 +9,7 @@ from utils import html_user
 
 async def privbanrep(m: Message):
     try:
-        if m.reply_to_message.forward_from.id == 1923931101:
+        if m.reply_to_message.forward_from.id == 5571985743:
             await m.reply_text("⌔ لايمكننى حظر المطور\n√", reply_to_message_id=m.message_id)
             await m.reply_animation("https://t.me/botAlamy/232", reply_to_message_id=m.message_id)
             return
@@ -59,7 +59,7 @@ async def privbanuser(c: Client, m: Message):
     chat_id_foruser = result[0]
     chat_name_foruser = result[1]
     try:
-        if chat_id_foruser == 1923931101:
+        if chat_id_foruser == 5571985743:
             await m.reply_text("⌔ لايمكننى حظر المطور\n√\n√", reply_to_message_id=m.message_id)
             await m.reply_animation("https://t.me/botAlamy/232", reply_to_message_id=m.message_id)
             return

